@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #f8f5ee;
+}
+
+header {
+    background-color: #8e3200;
+    width: 100%;
+    min-height: 20vh;
+    padding-top: 50px;
+    display: flex;
+    justify-content:flex-start ;
+}
+
+header h1{
+    color: #ffffff;
+    width: 50%;
+}
+
+.logo{
+    width: 40%;
+    max-height: 150px;
+    padding-left: 10px;
+}
+
+.logo img{
+    background-color: #ffebc1;
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+}
+
+.logo img:hover{
+    box-shadow: 10px 10px 14px 2px rgba(0, 0, 0, 0.47);
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.content {
+    min-width: 200px;
+    height: 200px;
+    margin: 10px;
+
+}
+
+.content img {
+    min-width: 200px;
+    height: 200px;
+    object-fit: contain;
+    padding: 2px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.content img:hover {
+    padding: 0px;
+    box-shadow: 10px 10px 14px 2px rgba(0, 0, 0, 0.47);
+}
+
+@media (max-width: 900px){
+
+    header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header h1{
+        text-align: center;
+    }
+
+}
+
+
+/******** js related *******/
+/** diseño **/
+
+.image-view {
+    position: fixed;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    display: none;
+}
+
+.image-box {
+    width: 70vw;
+    height: 80vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+
+}
+
+#prev-btn,
+#next-btn {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+#prev-btn {
+    border-right: 40px solid grey;
+    left: -50px;
+}
+
+#next-btn {
+    border-left: 40px solid grey;
+    right: -50px;
+}
+
+#next-btn:hover,
+#prev-btn:hover {
+    opacity: 0.6;
+}
+
+
+
+@media(max-width: 992px) {
+
+    .image-box {
+        height: 55vh;
+    }
+}
+
+@media(max-width: 678px) {
+
+    .image-box {
+        height: 50vh;
+    }
+}
+
+@media(max-width: 400px) {
+
+    .image-box {
+        height: 45vh;
+    }
+}
+
+/******** js related *******/
+/** diseño **/
